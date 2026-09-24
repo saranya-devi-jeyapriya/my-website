@@ -1,80 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Website </title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .header {
-            background: #222;
-            color: white;
-            padding: 25px;
-        }
-
-        .content {
+        .login-box {
             background: white;
-            width: 70%;
-            max-width: 600px;
-            margin: 80px auto;
+            width: 360px;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        h1 {
-            font-size: 40px;
+        .login-box h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
         }
 
-        p {
-            font-size: 18px;
-            color: #555;
+        .login-box p {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
         }
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background: #222;
-            color: white;
-            text-decoration: none;
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
             border-radius: 8px;
+            font-size: 15px;
         }
 
-        .button:hover {
-            background: #444;
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #667eea;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background: #5568d9;
         }
 
         .footer {
-            color: #777;
-            margin-top: 40px;
+            text-align: center;
+            margin-top: 25px;
+            color: #888;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <h2>My Personal Website</h2>
-    </div>
+    <div class="login-box">
 
-    <div class="content">
-        <h1>Welcome! 👋</h1>
+        <h1>Welcome</h1>
 
-        <p>This is saranya website.</p>
+        <p>Login to My Website</p>
 
-       
+        <form>
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+            >
 
-        <a href="#" class="button">Explore My Website</a>
-    </div>
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+            >
 
-    <div class="footer">
-        <p>Created using GitHub Pages</p>
+            <button type="button" class="login-button">
+                Login
+            </button>
+        </form>
+
+        <div class="footer">
+            My Website © 2026
+        </div>
+
     </div>
 
 </body>
